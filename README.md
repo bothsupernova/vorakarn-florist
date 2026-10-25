@@ -5,7 +5,7 @@ Static Thai florist website, ready for Cloudflare Pages.
 ## Pages
 
 - Home: `/`
-- Our Service: `/flowers/` — พวงหรีด, แจกันและช่อดอกไม้, งานอีเว้นท์
+- สินค้าของเรา: `/flowers/` — พวงหรีด, แจกันและช่อดอกไม้, งานตกแต่งสถานที่
 - Gallery: `/gallery/`
 - About: `/about/`
 - Contact: `/contact/`
