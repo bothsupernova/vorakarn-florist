@@ -59,3 +59,24 @@ body{padding-top:127px}
   body{padding-top:103px}
   .header-phone{font-size:12px}
 }
+
+/* Keep the desktop menu centered independently of the side controls. */
+@media(min-width:681px){
+  .header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+  .header-inner>.brand{justify-self:start}
+  .header-inner>.primary-nav{justify-self:center;white-space:nowrap}
+  .header-inner>.header-actions{justify-self:end;margin-left:0}
+}
+@media(min-width:901px) and (max-width:1160px){
+  .header-cta{display:none}
+}
+@media(min-width:681px) and (max-width:900px){
+  .header-inner{height:115px;grid-template-columns:1fr 1fr;grid-template-rows:66px 49px;gap:0 20px}
+  .header-inner>.primary-nav{grid-row:2;grid-column:1 / -1;align-self:start}
+  .header-inner>.header-actions{grid-row:1;grid-column:2}
+  html{scroll-padding-top:146px}
+  body{padding-top:146px}
+}
+.contact-line-id{font-size:16px;line-height:1.8;overflow-wrap:anywhere}
+.contact-line-note{font-size:12px;color:#c7b09b;margin-top:4px;line-height:1.8}
+@media(max-width:680px){.contact-line-id{font-size:14px}}
