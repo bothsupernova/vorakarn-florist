@@ -97,3 +97,23 @@ body{padding-top:127px}
 .delivery-note strong{font-weight:600;color:var(--brown)}
 @media(max-width:900px){.delivery-card{padding:19px 17px;margin-top:25px}.delivery-heading{gap:10px}.delivery-card h2{font-size:22px}.delivery-card h2 span{display:block;margin-left:0;font-size:13px}.delivery-temples{gap:6px}.delivery-temples li{padding:4px 8px}}
 @media(max-width:680px){.delivery-card{max-width:none;margin-top:28px}.delivery-card h2 span{display:inline;margin-left:4px}.delivery-temples li{font-size:12px}}
+
+/* Customer inquiry form */
+.lead-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:start}
+.lead-intro h2{font-size:clamp(28px,3vw,42px);line-height:1.7;margin:16px 0 22px}
+.lead-intro>p:not(.overline){font-size:14px;color:var(--brown-light);line-height:2}
+.lead-intro .lead-urgent{margin-top:27px;padding-top:23px;border-top:1px solid var(--line)}
+.lead-urgent a{text-decoration:underline;text-underline-offset:4px}
+.lead-form{padding:32px;background:var(--white);border:1px solid var(--line)}
+.lead-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}
+.lead-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.lead-field label{font-size:13px;font-weight:500;color:var(--brown)}
+.lead-field label>span{color:#984a37}.lead-field small{font-size:11px;font-weight:400;color:var(--brown-light)}
+.lead-field input,.lead-field select,.lead-field textarea{width:100%;min-width:0;padding:12px 13px;min-height:48px;border:1px solid var(--line);border-radius:0;background:var(--cream);color:var(--espresso);font:14px var(--sans)}
+.lead-field textarea{resize:vertical;line-height:1.8}.lead-field input:focus-visible,.lead-field select:focus-visible,.lead-field textarea:focus-visible,.lead-consent input:focus-visible{outline:2px solid var(--brown-light);outline-offset:3px}
+.lead-wide{grid-column:1 / -1}.lead-consent{display:flex;align-items:flex-start;gap:10px;margin-top:24px;font-size:12px;line-height:1.9;color:var(--brown-light)}
+.lead-consent input{width:17px;height:17px;margin-top:4px;flex-shrink:0;accent-color:var(--brown)}
+.lead-privacy,.lead-submit-note{font-size:11px;line-height:1.9;color:var(--brown-light);margin-top:12px;overflow-wrap:anywhere}.lead-privacy a{text-decoration:underline;text-underline-offset:3px}
+.lead-submit{border:0;cursor:pointer;margin-top:22px;width:100%}.lead-honeypot{display:none}
+@media(max-width:900px){.lead-layout{grid-template-columns:1fr;gap:35px}.lead-intro{max-width:650px}}
+@media(max-width:680px){.lead-form{padding:24px 18px}.lead-fields{grid-template-columns:1fr;gap:19px}.lead-field input,.lead-field select,.lead-field textarea{font-size:16px}.lead-intro h2{font-size:30px}}
