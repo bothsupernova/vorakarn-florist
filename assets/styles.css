@@ -82,3 +82,18 @@ body{padding-top:127px}
 @media(max-width:680px){.contact-line-id{font-size:14px}}
 
 .gallery-empty{padding:48px 20px;text-align:center;border:1px solid var(--line);color:var(--brown-light);line-height:2}.gallery-empty[hidden]{display:none}.gallery-empty .text-link{display:inline-block;margin-top:14px}
+
+/* Delivery information beside the home-page introduction. */
+.delivery-card{width:100%;max-width:460px;margin-top:30px;padding:23px 24px 20px;border:1px solid var(--line);border-left:3px solid var(--gold);background:linear-gradient(125deg,var(--white),var(--sand));box-shadow:0 9px 24px #3a281f06}
+.delivery-heading{display:flex;align-items:center;gap:14px}
+.delivery-icon{display:flex;align-items:center;justify-content:center;flex:0 0 45px;width:45px;height:45px;border-radius:50%;background:var(--cream);color:var(--brown-light)}
+.delivery-icon svg{width:30px;height:30px}
+.delivery-eyebrow{font-size:11px;color:var(--brown-light);letter-spacing:.04em;margin-bottom:4px}
+.delivery-card h2{font-family:var(--sans);font-size:24px;font-weight:600;line-height:1.5;color:var(--brown)}
+.delivery-card h2 span{font-size:15px;font-weight:400;color:var(--brown-light);margin-left:5px}
+.delivery-temples{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 15px;padding:0;list-style:none}
+.delivery-temples li{padding:5px 11px;border:1px solid #d5c4ae;background:#fffdf980;border-radius:3px;font-size:12px;color:var(--brown);line-height:1.8}
+.delivery-note{padding-top:13px;border-top:1px solid var(--line);font-size:12px;color:var(--brown-light);line-height:1.8}
+.delivery-note strong{font-weight:600;color:var(--brown)}
+@media(max-width:900px){.delivery-card{padding:19px 17px;margin-top:25px}.delivery-heading{gap:10px}.delivery-card h2{font-size:22px}.delivery-card h2 span{display:block;margin-left:0;font-size:13px}.delivery-temples{gap:6px}.delivery-temples li{padding:4px 8px}}
+@media(max-width:680px){.delivery-card{max-width:none;margin-top:28px}.delivery-card h2 span{display:inline;margin-left:4px}.delivery-temples li{font-size:12px}}
