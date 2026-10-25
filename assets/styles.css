@@ -80,3 +80,5 @@ body{padding-top:127px}
 .contact-line-id{font-size:16px;line-height:1.8;overflow-wrap:anywhere}
 .contact-line-note{font-size:12px;color:#c7b09b;margin-top:4px;line-height:1.8}
 @media(max-width:680px){.contact-line-id{font-size:14px}}
+
+.gallery-empty{padding:48px 20px;text-align:center;border:1px solid var(--line);color:var(--brown-light);line-height:2}.gallery-empty[hidden]{display:none}.gallery-empty .text-link{display:inline-block;margin-top:14px}

@@ -15,6 +15,7 @@
 
   const galleryItems = [...document.querySelectorAll('.gallery-card')];
   const tabs = [...document.querySelectorAll('.gallery-tabs .tab')];
+  const emptyState = document.querySelector('.gallery-empty');
   let visibleItems = galleryItems;
   tabs.forEach(tab => tab.addEventListener('click', () => {
     const filter = tab.dataset.filter;
@@ -25,6 +26,7 @@
     });
     visibleItems = galleryItems.filter(item => filter === 'all' || item.dataset.cat === filter);
     galleryItems.forEach(item => { item.hidden = !visibleItems.includes(item); });
+    if (emptyState) emptyState.hidden = visibleItems.length > 0;
   }));
 
   const requestedFilter = new URLSearchParams(window.location.search).get('type');
@@ -42,7 +44,8 @@
     const item = visibleItems[currentIndex];
     mainImg.src = item.dataset.image;
     mainImg.alt = item.dataset.alt;
-    caption.textContent = item.dataset.cat === 'wreath' ? 'พวงหรีดแสดงความอาลัย · Vorakarn Florist' : 'งานดอกไม้ตกแต่งสถานที่ · Vorakarn Florist';
+    const categoryLabels = { wreath: 'พวงหรีดแสดงความอาลัย', bouquet: 'แจกันและช่อดอกไม้', event: 'งานตกแต่งสถานที่' };
+    caption.textContent = `${categoryLabels[item.dataset.cat] || 'ผลงานดอกไม้'} · Vorakarn Florist`;
   }
   galleryItems.forEach(item => item.addEventListener('click', () => {
     lastFocused = item;
@@ -61,13 +64,9 @@
   });
   document.querySelectorAll('[data-service]').forEach(el => el.addEventListener('click', () => {
     const service = el.dataset.service;
-    if (service === 'event' || service === 'arrangement' || service === 'bouquet') {
-      const target = tabs.find(t => t.dataset.filter === 'event');
-      if (target) target.click();
-    } else {
-      const target = tabs.find(t => t.dataset.filter === 'wreath');
-      if (target) target.click();
-    }
+    const filter = service === 'arrangement' ? 'event' : service;
+    const target = tabs.find(t => t.dataset.filter === filter);
+    if (target) target.click();
   }));
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
