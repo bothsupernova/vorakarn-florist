@@ -88,3 +88,11 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }
 })();
+
+// Carry the selected special service into the inquiry form.
+document.querySelectorAll('[data-special-service]').forEach(link => {
+  link.addEventListener('click', () => {
+    const select = document.getElementById('lead-service');
+    if (select) select.value = link.dataset.specialService;
+  });
+});
